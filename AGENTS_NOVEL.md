@@ -41,6 +41,7 @@
 
 ### 4.1 Strict Modularity (200行の鉄則)
 - **Maximum File Size**: 1ファイルは**200行**を目安とする。300行を超えるファイルは「設計ミス」と見なし、即座にリファクタリング（Hookの抽出、コンポーネント分割、Utility化）を行う。
+- **注意**: 200行は目安であり、過剰な分割によりファイル間でコンテキストや可読性が損なわれる場合は、むやみに分割しないこと。必要な場合は、関連する小さなユニットを適切にドキュメント化し、各ファイルの責務を明確にしてから分割すること。
 - **Feature-Sliced Design (FSD)**: ディレクトリ構造は `features/visual-novel/components`, `entities/character`, `shared/ui` のように、機能と関心の分離に基づき整理する。
 
 ### 4.2 Type Safety & Defensive Coding
